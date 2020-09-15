@@ -1,0 +1,314 @@
+<!-- 应用中心详情 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/init.css" />
+    <link rel="stylesheet" href="./css/list.css" />
+    <link rel="stylesheet" href="./css/swiper.min.css">
+</head>
+
+<body class="bgWhite">
+    <!-- 头部 -->
+    <div class="header">
+        <div class="nav marAuto">
+            <a href="./index.html" class="nav-logo">
+                <img src="./img/index/logo.png" alt="log" />
+                <span class="logoWord">云厅</span>
+            </a>
+            <ul class="nav-bar">
+                <li><a href="./list.html" title="应用中心">应用中心</a> </li>
+                <li><a href="./file.html" title="文档库">文档库</a> </li>
+                <li><a href="" title="开发者">开发者</a> </li>
+                <li><a href="" title="支持">支持</a> </li>
+                <li><a href="" title="合作与生态">合作与生态</a> </li>
+                <li><a href="" title="客户">客户</a> </li>
+            </ul>
+            <div class="nav-right">
+                <span class="seek">
+                    <input placeholder="奕云CaaS" class="seekInput" />
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search seekIcon" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </span>
+                <span class="divider"></span>
+                <!-- <div class="noLogin disLine">
+              <span class="curp">登录</span>
+              <span class="regist">免费注册</span>
+            </div> -->
+                <div class="loginOut">
+                    <div class="navSele" onclick="handleOption()">
+                        租户控制台
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down navDown"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                        <div class="navOption disNone" onclick="handleJumpElse()">
+                            应用提供商
+                        </div>
+                    </div>
+                    <span class="navUser">
+                        <img class="touxiang"
+                            src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2381468826,3029522659&fm=111&gp=0.jpg"
+                            alt="">
+                        <span>张三</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索 -->
+    <div class="siteWrap">
+        <div class="site marAuto" style="height: 96px;margin-bottom: 30px;">
+            <div class="site-left">
+                <div class="title">
+                    奕云・云厅
+                </div>
+                <div class="market">Cloud Hall</div>
+            </div>
+            <div class="loopSearch">
+                <input class="siteInput" placeholder="请输入关键字" />
+                <span class="searchIcon">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search fs20" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </span>
+                <div class="remind">
+                    <span>智慧迎新</span>
+                    <span>一站式离校</span>
+                    <span>门户平台</span>
+                    <span>请假服务</span>
+                </div>
+            </div>
+            <div class="site-right">
+                <img class="sitePre" src="./img/index/present.png" alt="活动" />
+                <img src="./img/index/word.png" alt="活动" />
+            </div>
+        </div>
+    </div>
+
+    <div class="marAuto">
+        <div class="routeDes"><span class="hoverBlue" onclick="handleJump()">应用中心</span> / <span class="c66">应用详情</span> </div>
+        <div class="detail">
+            <div class="detailImg">
+                <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(./images/nature-1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-6.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-7.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-8.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-9.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-10.jpg)"></div>
+                    </div>
+                </div>
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(./images/nature-1.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-6.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-7.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-8.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-9.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/nature-10.jpg)"></div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+            </div>
+            <div class="detailContent">
+                <div class="detitle">容器服务云平台（奕云CaaS）</div>
+                <div>版本：V1.0</div>
+                <div>所属分类：云应用</div>
+                <div class="dedes">
+                    落地的智慧校园领域容器云平台，生产级的容器云服务，助落地的智慧校园领域容器云平台，生产级的容器云服务，助落地的智慧校园领域容器云平台，生产级的容器云服务，助力高校打造领先的原生应用云平台，实现“互联网
+                </div>
+                <div class="detailRate">
+                    <div class="detag">
+                        <span class="setTag">微服务架构</span>
+                        <span class="setTag">微服务架构</span>
+                        <span class="setTag">微服务架构</span>
+                    </div>
+                    <div class="divder ant-divider-vertical dedivder"></div>
+                    <div class="destar">
+                        <div class="star">
+                            评分
+                            <span class="vote-star">
+                                <i style="width:87%"></i></span>
+                            <span class="vote-number">8.7分</span>
+                        </div>
+                        <div class="cYellow">800人使用</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="detailBtn" style="background:rgba(49,117,255,1);">立即使用</div>
+                    <div class="detailBtn">立即申请</div>
+                </div>
+            </div>
+        </div>
+        <!-- 分割线 -->
+        <div class="divder ant-divider-horizontal"></div>
+    </div>
+    <!-- 导航条 -->
+    <div class="fileNavWrap" id="fileNavWrap">
+        <div class="detailTab marAuto" id="detailTab">
+            <span class="activeTab navItem"><a href="#cp">产品详情</a></span>
+            <span class="navItem"><a href="#kh">客户案例</a></span>
+            <span class="navItem"><a href="#sy">使用指南</a></span>
+            <span class="navItem"><a href="#pj">用户评价</a></span>
+        </div>
+    </div>
+    <div class="marAuto">
+        <div id="tabContent">
+            <!-- 绑数据时去掉height 让内容自动撑开高度 -->
+            <div class="contentItem" id="cp" style="height: 400px;">
+                <div class="detailTitle">产品详情</div>
+            </div>
+            <div class="contentItem" id="kh" style="height: 400px;">
+                <div class="detailTitle">客户案例</div>
+            </div>
+            <div class="contentItem" id="sy" style="height: 400px;">
+                <div class="detailTitle">使用指南</div>
+            </div>
+            <div class="contentItem" id='pj' style="height: 400px;">
+                <div class="detailTitle">用户评价</div>
+                <div class="divder ant-divider-horizontal"></div>
+                <div class="userCommen">
+                    <div>
+                        <span class="mr50">chorals chen</span>
+                        <div class="star mr50" style="display: inline-block;">
+                            <span class="c38">评分</span>
+                            <span class="vote-star">
+                                <i style="width:87%"></i></span>
+                            <span class="vote-number">8.7分</span>
+                        </div>
+                        <span class="c38">2020-07-09 15:38</span>
+                    </div>
+                    <div class="mt16">
+                        这是一条很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的评价。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/swiper.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // swiper
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+            thumbs: {
+                swiper: galleryThumbs
+            }
+        });
+
+    })
+</script>
+
+<script type="text/javascript">
+    function handleJump() {
+        window.location.href = './list.html'
+    }
+    function menuFixed(id,) {
+        var obj = document.getElementById(id);
+        var _getHeight = obj.offsetTop;
+
+        window.onscroll = function () {
+            changePos(id, _getHeight);
+        }
+    }
+    function changePos(id, height) {
+        var obj = document.getElementById(id);
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop < height) {
+            obj.style.position = 'static';
+            $("#fileNavWrap").removeClass("navShadow");
+            obj.style.top = '48px'
+        } else {
+            obj.style.position = 'sticky';
+            $("#fileNavWrap").addClass("navShadow");
+        }
+    }
+
+    window.onload = function () {
+        menuFixed('fileNavWrap');
+        // 导航按钮点击
+        $('.navItem').click(function () {
+            $(this).addClass('activeTab').siblings().removeClass('activeTab');
+        })
+        function handleJumpElse() {
+            console.log('这里写跳转路由网址')
+        }
+        function handleOption() {
+            event.stopPropagation();
+            $('.navOption').toggleClass('disNone')
+            $('.navDown').toggleClass('trans180')
+        }
+
+        // 导航定位
+        function updateNav() {
+
+            var scop = document.documentElement.scrollTop;
+            var k;
+            for (var i = 0; i < divHeights.length; i++) {
+                if (scop > divHeights[i] - 300) {
+                    k = i;
+                }
+            }
+            lis[k].classList.add('activeTab');
+            for (var i = 0; i < lis.length; i++) {
+                if (i == k) continue;
+                else lis[i].classList.remove('activeTab');
+            }
+        }
+        var divHeights = [];
+        var lis = Array.from($('.navItem'))
+        var divs = Array.from($('.contentItem'))
+        for (var i = 0; i < divs.length; i++) {         // 循环每个 div 的距离 top 的值存放至数组
+            divHeights.push(divs[i].getBoundingClientRect().top);
+        }
+        window.addEventListener('scroll', updateNav);
+    }
+</script>

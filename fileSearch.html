@@ -1,0 +1,207 @@
+<!-- 文档搜索 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/init.css" />
+    <link rel="stylesheet" href="./css/file.css" />
+</head>
+
+<body>
+   <!-- 头部 -->
+   <div class="header">
+    <div class="nav marAuto">
+      <a href="./index.html" class="nav-logo">
+        <img src="./img/index/logo.png" alt="log" />
+        <span class="logoWord">云厅</span>
+      </a>
+      <ul class="nav-bar">
+        <li><a href="./list.html" title="应用中心">应用中心</a> </li>
+        <li><a href="./file.html" title="文档库">文档库</a> </li>
+        <li><a href="" title="开发者">开发者</a> </li>
+        <li><a href="" title="支持">支持</a> </li>
+        <li><a href="" title="合作与生态">合作与生态</a> </li>
+        <li><a href="" title="客户">客户</a> </li>
+      </ul>
+      <div class="nav-right">
+        <span class="seek">
+          <input placeholder="奕云CaaS" class="seekInput" />
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search seekIcon" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+            <path fill-rule="evenodd"
+              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+          </svg>
+        </span>
+        <span class="divider"></span>
+        <!-- <div class="noLogin disLine">
+          <span class="curp">登录</span>
+          <span class="regist">免费注册</span>
+        </div> -->
+        <div class="loginOut">
+          <div class="navSele" onclick="handleOption()">
+            租户控制台
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down navDown" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+            </svg>
+            <div class="navOption disNone" onclick="handleJumpElse()">
+              应用提供商
+            </div>
+          </div>
+          <span class="navUser">
+            <img class="touxiang"
+              src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2381468826,3029522659&fm=111&gp=0.jpg"
+              alt="">
+            <span>张三</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- 头部搜索 -->
+    <div class="fSearchHead" style="margin-top: 48px;">
+        <div class="marAuto">
+            <div class="loopSearch">
+                <input class="siteInput" id="searchInput" placeholder="请输入要搜索的产品或者文档" />
+                <span class="searchIcon" onclick="handleSearch()">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search fs20" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </span>
+                <div class="remind">
+                    搜索热词:
+                    <span>智慧迎新</span>
+                    <span>一站式离校</span>
+                    <span>门户平台</span>
+                    <span>请假服务</span>
+                    <span>对象存储</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索主体 -->
+    <div class="marAuto pt20">
+        <div class="cBlue">
+            文档（199）
+        </div>
+        <div class="divder ant-divider-horizontal" style="margin: 12px 0;"></div>
+        <div class="dropdown mb16">
+            <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                文档
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">下拉1</a>
+                <a class="dropdown-item" href="#">下拉2</a>
+                <a class="dropdown-item" href="#">下拉3</a>
+            </div>
+        </div>
+        <div class="searchItem">
+            <p class="searchItem-title">云服务器组添加成员 - 弹性云服务器 ECS</p>
+            <p class="mb16">
+                云服务器组添加成员云服务器组添加成员例软件版本本文搭建 ftp 服务组成版本如下： windows 操作
+                云服务器组添加成员云服务器组添加成员云服务器组添加成员例软件版本本文搭建 ftp 服务组成版本如下： windows 操作系统，本文以 windows...
+            </p>
+            <div>来自： 文档 > 智慧迎新</div>
+        </div>
+        <div class="searchItem">
+            <p class="searchItem-title">云服务器组添加成员 - 弹性云服务器 ECS</p>
+            <p class="mb16">
+                云服务器组添加成员云服务器组添加成员例软件版本本文搭建 ftp 服务组成版本如下： windows 操作
+                云服务器组添加成员云服务器组添加成员云服务器组添加成员例软件版本本文搭建 ftp 服务组成版本如下： windows 操作系统，本文以 windows...
+            </p>
+            <div>来自： 文档 > 智慧迎新</div>
+        </div>
+    </div>
+    <!-- 底部分页 -->
+    <div class="marAuto">
+        共95条记录，每页10条记录
+        <span class="fr ml10">
+            跳至 <input class="setInput" /> 页
+        </span>
+        <ul class="setPagination fr">
+            <li><a href="#">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                </a></li>
+            <li class="pageLi active"><a>1</a></li>
+            <li class="pageLi"><a>2</a></li>
+            <li class="pageLi"><a>3</a></li>
+            <li class="pageLi"><a>4</a></li>
+            <li class="pageLi"><a>5</a></li>
+            <li class="pageLi"><a>6</a></li>
+            <li><a href="#">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </a></li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        // 分页按钮点击
+        $('.pageLi').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+        // item点击
+        $('.searchItem').click(function () {
+           window.location.href = './fileDetail.html'
+        })
+        handleKeyColor()
+    })
+    function handleSearch() {
+        if ($('#searchInput')[0].value) {
+            handleKeyColor()
+        } else {
+            // 如果输入的值为空
+            window.location.href = './file.html'
+        }
+    }
+    // 关键字变色
+    function handleKeyColor() {
+        clearSelection()
+        // 传进来的值
+        var strTemp = decodeURI(location.search.substr(1))
+        if (strTemp.split('=')[1] && (!$('#searchInput')[0].value)) {
+            $('#searchInput')[0].value = strTemp.split('=')[1]
+        }
+        // console.log('window',str)
+        var searchText = $('#searchInput').val();//获取你输入的关键字；
+        var regExp = new RegExp(searchText, 'g');//创建正则表达式，g表示全局的，如果不用g，则查找到第一个就不会继续向下查找了；
+        $('p').map((index, el) => {
+            var html = el.innerHTML;
+            var newHtml = html.replace(regExp, '<span class="cBlue" >' + searchText + '</span>');//将找到的关键字替换，加上highlight属性；
+            el.innerHTML = newHtml
+        });
+    }
+    // 清空搜索
+    function clearSelection() {
+        $('p').map((index, el) => {
+            el.innerHTML = el.innerText
+        });
+    }
+</script>

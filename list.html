@@ -1,0 +1,240 @@
+<!-- 应用中心 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/init.css" />
+    <link rel="stylesheet" href="./css/list.css" />
+</head>
+
+<body class="bgWhite">
+    <!-- 头部 -->
+    <div class="header">
+        <div class="nav marAuto">
+            <a href="./index.html" class="nav-logo">
+                <img src="./img/index/logo.png" alt="log" />
+                <span class="logoWord">云厅</span>
+            </a>
+            <ul class="nav-bar">
+                <li><a href="./list.html" title="应用中心">应用中心</a> </li>
+                <li><a href="./file.html" title="文档库">文档库</a> </li>
+                <li><a href="" title="开发者">开发者</a> </li>
+                <li><a href="" title="支持">支持</a> </li>
+                <li><a href="" title="合作与生态">合作与生态</a> </li>
+                <li><a href="" title="客户">客户</a> </li>
+            </ul>
+            <div class="nav-right">
+                <span class="seek">
+                    <input placeholder="奕云CaaS" class="seekInput" />
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search seekIcon" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </span>
+                <span class="divider"></span>
+                <!-- <div class="noLogin disLine">
+          <span class="curp">登录</span>
+          <span class="regist">免费注册</span>
+        </div> -->
+                <div class="loginOut">
+                    <div class="navSele" onclick="handleOption()">
+                        租户控制台
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down navDown"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                        <div class="navOption disNone" onclick="handleJumpElse()">
+                            应用提供商
+                        </div>
+                    </div>
+                    <span class="navUser">
+                        <img class="touxiang"
+                            src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2381468826,3029522659&fm=111&gp=0.jpg"
+                            alt="">
+                        <span>张三</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索 -->
+    <div class="siteWrap">
+        <div class="site marAuto" style="height: 96px;margin-bottom: 30px;">
+            <div class="site-left">
+                <div class="title">
+                    奕云・云厅
+                </div>
+                <div class="market">Cloud Hall</div>
+            </div>
+            <div class="loopSearch">
+                <input class="siteInput" placeholder="请输入关键字" />
+                <span class="searchIcon">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search fs20" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </span>
+                <div class="remind">
+                    <span>智慧迎新</span>
+                    <span>一站式离校</span>
+                    <span>门户平台</span>
+                    <span>请假服务</span>
+                </div>
+            </div>
+            <div class="site-right">
+                <img class="sitePre" src="./img/index/present.png" alt="活动" />
+                <img src="./img/index/word.png" alt="活动" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="marAuto">
+        <!-- 头部筛选条件 -->
+        <div class="listHeader">
+            <div class="rowOne">
+                <div class="classItemTitle" >商品分类</div>
+                <div>
+                    <span class="selec classItem">全部</span>
+                    <span class="classItem">微服务支撑平台</span> <span class="classItem">智慧校园管理</span>
+                    <span class="classItem">智慧教学资源</span> <span class="classItem">智慧校园服务</span>
+                    <span class="classItem">智慧教学环境</span> <span class="classItem">安全运维保障</span>
+                    <span class="classItem">智慧教学环境</span> <span class="classItem">安全运维保障</span>
+                    <span class="classItem">智慧教学环境</span> <span class="classItem">安全运维保障</span>
+                </div>
+            </div>
+            <div class="rowTwo">
+                <span class="sorItemTitle">综合排序</span>
+                <span class="sorItem  noSelecSort">
+                    销量
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.646 9.646a.5.5 0 0 1 .708 0L8 12.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd" d="M8 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                </span>
+                <span class="sorItem noSelecSort">评分
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.646 9.646a.5.5 0 0 1 .708 0L8 12.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd" d="M8 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                </span>
+                <span class="sorItem noSelecSort">发布时间
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.646 9.646a.5.5 0 0 1 .708 0L8 12.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd" d="M8 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <!-- 列表 -->
+        <div class="list">
+            <div class="list-item">
+                <div class="leftImg">
+                    <img
+                        src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2747364614,2411895227&fm=26&gp=0.jpg" />
+                </div>
+                <div class="midContent">
+                    <div class="conTitle">IT互联网行业 协同OASaaS | 【云厅特供版】全程云OA V1.0</div>
+                    <div>落地的智慧校园领域容器云平台，生产级的容器云服务，助力高校打造领先的原生应用云平台，实现“互联网+”持续创新。在不同空间内部署同样应用过程相同，运行环境通过空间逻辑隔离。</div>
+                    <div>
+                        <span class="setTag">微服务架构</span>
+                        <span class="setTag">负载均衡</span>
+                    </div>
+                </div>
+                <div class="rightRate">
+                    <div>发布时间：2020-03-18</div>
+                    <div class="star">
+                        <span class="vote-star">
+                            <i style="width:87%"></i></span>
+                        <span class="vote-number">8.7分</span>
+                    </div>
+                    <div>已售：500</div>
+                </div>
+            </div>
+            <div class="noData">
+                <div class="img"><img src="./img/list/yy.png" /></div>
+                <p>暂无应用</p>
+            </div>
+        </div>
+        <!-- 底部分页 -->
+        <div class="marAuto p20">
+            共95条记录，每页10条记录
+            <span class="fr ml10">
+                跳至 <input class="setInput" /> 页
+            </span>
+            <ul class="setPagination fr">
+                <li><a href="#">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                    </a></li>
+                <li class="pageLi active"><a>1</a></li>
+                <li class="pageLi"><a>2</a></li>
+                <li class="pageLi"><a>3</a></li>
+                <li class="pageLi"><a>4</a></li>
+                <li class="pageLi"><a>5</a></li>
+                <li class="pageLi"><a>6</a></li>
+                <li><a href="#">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </a></li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    function handleJumpElse() {
+        console.log('这里写跳转路由网址')
+    }
+    function handleOption() {
+        event.stopPropagation();
+        $('.navOption').toggleClass('disNone')
+        $('.navDown').toggleClass('trans180')
+    }
+    // 分类按钮点击
+    $('.classItem').click(function () {
+        $(this).addClass('selec').siblings().removeClass('selec');
+    })
+    // 排序按钮点击
+    $('.sorItem').click(function () {
+        $(this).addClass('cBlue').siblings().removeClass('cBlue');
+    })
+    // 排序按钮图标显示
+    $('.noSelecSort').click(function () {
+        $(this).children('.bi-arrow-down').toggleClass('tran180');
+    })
+    //分页点击
+    $('.pageLi').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+    //item点击
+    $('.list-item').click(function () {
+        window.location.href = './listdetail.html'
+    })
+</script>

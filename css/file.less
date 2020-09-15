@@ -1,0 +1,119 @@
+.fileHead {
+    width           : 100%;
+    height          : 320px;
+    background-image: url(../img/file/banner.png);
+    background-size : cover;
+    color           : #fff;
+    padding-top     : 70px;
+
+    .loopSearch {
+        position : relative;
+        float    : left;
+        width    : 640px;
+        height   : 40px;
+        left     : 50%;
+        top      : 20%;
+        transform: translate(-50%, -50%);
+    }
+
+    &-title {
+        font-weight: bold;
+        font-size  : 36px;
+        text-align : center;
+    }
+
+    .remind {
+        color: #fff;
+    }
+}
+
+.fileNavWrap {
+    &.navShadow {
+        box-shadow: 0px 3px 6px rgba(90, 139, 196, 0.2);
+        width     : 100%;
+        background: #fff;
+        z-index   : 9;
+    }
+}
+
+.fileNav {
+    line-height: 60px;
+    height     : 60px;
+
+
+
+    span {
+        margin : 0 12px;
+        padding: 4px 13px;
+        cursor : pointer;
+    }
+}
+
+.fileItem {
+    border-bottom: 1px solid rgba(240, 242, 245, 1);
+    padding      : 30px 20px;
+
+    &-title {
+        color        : rgba(38, 38, 38, 1);
+        font-weight  : bold;
+        font-size    : 16px;
+        margin-bottom: 20px;
+    }
+
+    &-proj {
+        width: 100%;
+        color: rgba(89, 89, 89, 1);
+
+        span {
+            display: inline-block;
+            width  : 24.5%;
+            padding: 12px 0;
+        }
+    }
+}
+
+.fSearchHead {
+    background : rgba(240, 242, 245, 1);
+    width      : 100%;
+    height     : 122px;
+    padding-top: 20px;
+
+    .loopSearch {
+        position    : relative;
+        float       : left;
+        // width    : 640px;
+        // height   : 40px;
+        // left     : 50%;
+        // top      : 20%;
+        // transform: translate(-50%, -50%);
+    }
+
+    .remind {
+        color: rgba(89, 89, 89, 1);
+
+        span:not(:last-child) {
+            border-right: 1px solid rgba(89, 89, 89, 0.5) !important;
+        }
+    }
+}
+
+.searchItem {
+    padding-bottom: 20px;
+    margin-bottom : 20px;
+    border-bottom : 1px solid rgba(240, 242, 245, 1);
+    cursor: pointer;
+    &:hover{
+        .searchItem-title{
+            color: #3175ff;
+            text-decoration: underline;
+        }
+    }
+    &-title {
+        font-size    : 16px;
+        margin-bottom: 16px;
+
+        span {
+            font-size: 16px;
+        }
+    }
+}

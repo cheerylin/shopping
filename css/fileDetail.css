@@ -1,0 +1,57 @@
+.ztree li ul.line {
+  background: none !important;
+}
+.ztree li span.button {
+  background-image: url(../img/file/bg.png) !important;
+}
+.node_name {
+  font-size: 14px;
+}
+.ztree li span {
+  line-height: normal;
+}
+.ztree li a {
+  padding: 0;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  width: 90%;
+  margin: 4px 0;
+}
+.ztree a:hover {
+  text-decoration: none !important;
+  color: hsl(209, 100%, 55%);
+}
+.ztree li a.curSelectedNode {
+  color: hsl(209, 100%, 55%);
+  border: none;
+  background-color: #fff;
+  height: 26px;
+  line-height: 26px;
+  opacity: 1;
+}
+.leftTree {
+  background: #F5F8FF;
+  padding: 12px;
+  min-height: 500px;
+}
+.fDailMain {
+  margin-top: 70px;
+}
+.headBack {
+  display: inline-block;
+  color: hsl(0, 0%, 15%);
+  cursor: pointer;
+}
+.headBack:hover {
+  color: hsl(209, 100%, 55%);
+}
+.cTitle {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.cTime {
+  font-size: 12px;
+  color: #8c8c8c;
+  margin-bottom: 16px;
+}

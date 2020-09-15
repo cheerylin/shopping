@@ -1,0 +1,73 @@
+.loginHead {
+  height: 48px;
+  background-color: #0B2240;
+}
+.loginHead .loginBtn {
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  padding: 3px 14px;
+  cursor: pointer;
+}
+.loginHead .loginWord {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+  color: #fff;
+  margin: 12px 0 0 10px;
+}
+.loginContent {
+  margin-top: 40px;
+  /* 账号密码登录 */
+}
+.loginContent .loginForm {
+  text-align: center;
+}
+.loginContent .loginForm .setExtral {
+  position: absolute;
+  display: none;
+  top: 35px;
+  left: 0;
+  color: #f5222d;
+  font-size: 12px;
+}
+.loginContent .loginForm .formRole {
+  width: 400px;
+  display: inline-block;
+  text-align: left;
+}
+.loginContent .loginForm .formRole label {
+  margin-bottom: 0;
+}
+.loginContent .loginForm .formItem {
+  margin-bottom: 24px;
+}
+.loginContent .loginForm .formItem .codeTips {
+  position: absolute;
+  right: 14px;
+  cursor: pointer;
+  color: #3175ff;
+  top: -1px;
+}
+.loginContent .loginForm .formLeft {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+}
+.loginContent .loginForm .loginRe {
+  background-color: hsl(220, 100%, 60%);
+  width: 400px;
+  margin: 20px auto 0;
+}
+.loginContent .iconSee {
+  position: absolute;
+  top: 102px;
+  right: 15px;
+  cursor: pointer;
+}
+.loginContent .form-control {
+  width: 400px;
+  display: inline-block;
+}

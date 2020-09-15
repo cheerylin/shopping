@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+    <TITLE> ZTREE DEMO - Simple Data</TITLE>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="http://www.treejs.cn/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.treejs.cn/v3/js/jquery.ztree.core.js"></script>
+    <link rel="stylesheet" href="./css/init.css" />
+    <link rel="stylesheet" href="./css/fileDetail.css" />
+</HEAD>
+
+<BODY>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="nav marAuto">
+            <a href="./index.html" class="nav-logo">
+                <img src="./img/index/logo.png" alt="log" />
+                <span class="logoWord">云厅</span>
+            </a>
+            <ul class="nav-bar">
+                <li><a href="./list.html" title="应用中心">应用中心</a> </li>
+                <li><a href="./file.html" title="文档库">文档库</a> </li>
+                <li><a href="" title="开发者">开发者</a> </li>
+                <li><a href="" title="支持">支持</a> </li>
+                <li><a href="" title="合作与生态">合作与生态</a> </li>
+                <li><a href="" title="客户">客户</a> </li>
+            </ul>
+            <div class="nav-right">
+                <span class="seek">
+                    <input placeholder="奕云CaaS" class="seekInput" />
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search seekIcon" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </span>
+                <span class="divider"></span>
+                <!-- <div class="noLogin disLine">
+          <span class="curp">登录</span>
+          <span class="regist">免费注册</span>
+        </div> -->
+                <div class="loginOut">
+                    <div class="navSele" onclick="handleOption()">
+                        租户控制台
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down navDown"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                        <div class="navOption disNone" onclick="handleJumpElse()">
+                            应用提供商
+                        </div>
+                    </div>
+                    <span class="navUser">
+                        <img class="touxiang"
+                            src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2381468826,3029522659&fm=111&gp=0.jpg"
+                            alt="">
+                        <span>张三</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体内容 -->
+    <div class="marAuto fDailMain">
+        <!-- 头部 -->
+        <div class="headBack" onclick="hanldeBack()">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left verMid" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg>
+            文档首页
+        </div>
+        <div class="divder ant-divider-horizontal" style="margin: 12px 0;"></div>
+        <div class="row">
+            <!-- 左边树 -->
+            <div class="col-sm-3 leftTree">
+                <div class="cTitle pl20">
+                    文档库
+                </div>
+            <div class="divder ant-divider-horizontal" style="margin: 12px 0"></div>
+                <div class="zTreeDemoBackground">
+                    <ul id="treeDemo" class="ztree"></ul>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="cTitle">
+                    容器服务云平台
+                </div>
+                <div class="cTime">
+                    最近更新时间：2020-07-11  10:22:16
+                </div>
+                <div>
+                    基于容器技术、微服务架构开发的数据交换服务平台落地的智慧校园领域容器云平台，生产级的容器云服务，助力高校打造领先的原生应用云平台，实现“互联网+”持续创新。在不同空间内部署同样应用过程相同，运行环境通过空间逻辑隔离。适用于测试、联调及开发环境的部署。
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</BODY>
+
+</HTML>
+<SCRIPT type="text/javascript">
+    $(document).ready(
+        function () {
+            $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        });
+    var setting = {
+        view: {
+            dblClickExpand: false//屏蔽掉双击事件
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            onClick: onClick
+        }
+    };
+    var zNodes = [
+        { id: 1, pId: 0, name: "父节点1 - 展开", open: true },
+        { id: 11, pId: 1, name: "父节点11 - 折叠" }, { id: 111, pId: 11, name: "叶子节点111" },
+        { id: 112, pId: 11, name: "叶子节点112" }, { id: 113, pId: 11, name: "叶子节点113" },
+        { id: 114, pId: 11, name: "叶子节点114" }, { id: 12, pId: 1, name: "父节点12 - 折叠" },
+        { id: 121, pId: 12, name: "叶子节点121" }, { id: 122, pId: 12, name: "叶子节点122" },
+        { id: 123, pId: 12, name: "叶子节点123" }, { id: 124, pId: 12, name: "叶子节点124" },
+        { id: 13, pId: 1, name: "父节点13 - 没有子节点", isParent: true },
+        { id: 2, pId: 0, name: "父节点2 - 折叠" },
+        { id: 21, pId: 2, name: "父节点21 - 展开", open: true },
+        { id: 211, pId: 21, name: "叶子节点211" },
+        { id: 212, pId: 21, name: "叶子节点212" },
+        { id: 213, pId: 21, name: "叶子节点213" },
+        { id: 214, pId: 21, name: "叶子节点214" },
+        { id: 22, pId: 2, name: "父节点22 - 折叠" },
+        { id: 221, pId: 22, name: "叶子节点221" },
+        { id: 222, pId: 22, name: "叶子节点222" },
+        { id: 223, pId: 22, name: "叶子节点223" },
+        { id: 224, pId: 22, name: "叶子节点224" },
+        { id: 23, pId: 2, name: "父节点23 - 折叠" }, { id: 231, pId: 23, name: "叶子节点231" },
+        { id: 232, pId: 23, name: "叶子节点232" }, { id: 233, pId: 23, name: "叶子节点233" },
+        { id: 234, pId: 23, name: "叶子节点234" }, { id: 3, pId: 0, name: "父节点3 - 没有子节点", isParent: true }
+    ];
+    function onClick(e, treeId, treeNode) {
+        console.log('click')
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+        zTree.expandNode(treeNode);
+    }
+    function handleJumpElse() {
+        console.log('这里写跳转路由网址')
+    }
+    function handleOption() {
+        event.stopPropagation();
+        $('.navOption').toggleClass('disNone')
+        $('.navDown').toggleClass('trans180')
+    }
+    function hanldeBack() {
+        history.back()
+    }
+</SCRIPT>
