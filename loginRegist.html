@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/init.css" />
     <link rel="stylesheet" href="./css/login.css" />
 </head>
 
 <body>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
     <div class="loginHead">
         <div class="marAuto">
             <a href="./index.html">
@@ -75,7 +85,7 @@
                 <span class="pR" id="yzm">
                     <span class="formLeft"> 验证码：</span> <input type="text" placeholder="" onchange="handleYzm('yzm')"
                         class="form-control" />
-                    <span class="codeTips">| 获取验证码</span>
+                    <span class="codeTips">| <span onclick="startCountDown()" class="getcode">获取验证码</span></span>
                     <span class="setExtral" style="left: 82px;top: 30px;">请输入正确的验证码</span>
                 </span>
             </div>
@@ -136,5 +146,35 @@
         console.log($('#registBtn')[0].checked)
         var registBtn = document.getElementsByClassName('primaryBtn')[0]
         $('#exampleCheck')[0].checked ? $('#registBtn').removeClass('disAble') : $('#registBtn').addClass('disAble')
+    }
+    // 点击验证码
+    var countdown = 60;
+    var flag = false
+    function startCountDown() {
+        if (flag == false) {
+            flag = true
+            handleCapture()
+        }
+    }
+    function handleCapture() {
+        console.log('falg', flag)
+        setTime()
+        setTimeout(function () {
+            handleCapture();
+        }, 1000);
+
+    }
+    function setTime() {
+        if (countdown == 0) {
+            $('.getcode').html("获取验证码");
+            $('.getcode').removeClass('disableCode')
+            countdown = 60;
+            flag = false
+            return false;
+        } else {
+            $('.getcode').html(countdown + "s后可重新获取");
+            $('.getcode').addClass('disableCode')
+            countdown--;
+        }
     }
 </script>

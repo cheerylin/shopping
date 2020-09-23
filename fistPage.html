@@ -78,7 +78,7 @@
         <div class="open">
             <div class="wrap">
                 <div class="fBold fs16">开源开放</div>
-                <div class="mt6">云生态面向用户、应用供应商及平台服务商全方位开放，使三者合力、聚力共同为教育信息化建设发力。</div>
+                <div class="mt6 landIn">云生态面向用户、应用供应商及平台服务商全方位开放，使三者合力、聚力共同为教育信息化建设发力。</div>
             </div>
         </div>
 
@@ -86,16 +86,21 @@
             <div class="col-3">
                 <div class="fistItem">
                     <div class="fBold fs16 textRight">按需组合</div>
-                    <div class="mt24">基于教育行业业务长期积累，抽丝剥茧整合出业务中台、技术中台、数据中台，方便开发人员技术方案选型，快速满足高校需求。</div>
+                    <div class="mt24" style="transform: translateX(11px);">
+                        基于教育行业业务长期积累，抽丝剥茧整合出业务中台、技术中台、数据中台，方便开发人员技术方案选型，快速满足高校需求。</div>
                 </div>
                 <div class="secondItem">
                     <div class="fBold fs16 textRight">高效构建</div>
-                    <div class="mt24">云生态面向软件开发人员提供研发一体化服务，便于研发人员协同、高效工作，专注于业务构建。</div>
+                    <div class="mt24" style="transform: translateX(11px);">云生态面向软件开发人员提供研发一体化服务，便于研发人员协同、高效工作，专注于业务构建。
+                    </div>
                 </div>
             </div>
             <div class="col-6 mid">
-                <div class="circle"></div>
+                <!-- <div class="circle"></div> -->
+                <div class="circle circle1"></div>
                 <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+                <div class="circle circle4"></div>
                 <div style="z-index: 99;position: absolute;width: 100%;">
                     <img style="width: 100%;" src="./img/first/mid.png" />
                 </div>
@@ -151,7 +156,7 @@
     <div class="marAuto appCase">
         <div class="fistTitle">应用案例</div>
         <div class="secondTitle">奕云SAAS平台为您提供安全稳定/合规的云服务，助力企业快速发展</div>
-        <div class="row appCaseRow" >
+        <div class="row appCaseRow">
             <div data-index="0" class="col-3"><img src="./img/first/s4.png" alt=""></div>
             <div data-index="1" class="col-3"><img src="./img/first/s2.png" alt=""></div>
             <div data-index="2" class="col-3"><img src="./img/first/s3.png" alt=""></div>
@@ -177,6 +182,20 @@
 
 </html>
 <script>
+    setInterval(() => {
+        let landInTexts = document.querySelectorAll(".landIn");
+        landInTexts.forEach(landInText => {
+            let letters = landInText.textContent.split("");
+            landInText.textContent = "";
+            letters.forEach((letter, i) => {
+                let span = document.createElement("span");
+                span.textContent = letter;
+                span.style.animationDelay = `${i * 0.05}s`;
+                landInText.append(span);
+            });
+        });
+
+    }, 10000)
     // var data = [
     //     {
     //         title: '西北大学',

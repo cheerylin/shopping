@@ -113,32 +113,47 @@
     margin-top: 90px;
 
     .fistItem {
-        transform: translateY(-16px);
+        transform: translate(14px, -6px);
     }
 
     .secondItem {
-        margin-top: 320px;
+        margin-top: 340px;
+        transform : translate(14px, 0px);
     }
-    .mid{
+
+    .mid {
         position: relative;
-        .circle{
-            border-radius: 50%;
-            position: absolute;
-            width: 345px;
-            height: 345px;
-            top: 20%;
-            left: 25%;
+
+        .circle {
+            border-radius   : 50%;
+            position        : absolute;
+            width           : 345px;
+            height          : 345px;
+            top             : 20%;
+            left            : 25%;
             // transform: translate(-50%, -50%);
-            background-color: #e7edfe;
-            animation: circle 5s ease-out infinite;
+            background-color: #6892f79e;
+            // animation: circle 5s ease-out infinite;
         }
-        .circle2{
-            animation-delay: 2.5s;
-            opacity: 0;
+
+        .circle1 {
+            animation: circle 12s 9s ease-out infinite;
+        }
+
+        .circle2 {
+            animation: circle 12s 9s ease-out infinite;
+        }
+
+        .circle3 {
+            animation: circle 12s 6s ease-out infinite;
+        }
+
+        .circle4 {
+            animation: circle 12s 0s ease-out infinite;
         }
     }
 
-    
+
 }
 
 .solutionCase {
@@ -153,11 +168,16 @@
         justify-content: space-between;
         align-items    : center;
 
-        .caseItem {
+        .caseItem {-
             width      : 384px;
             height     : 451px;
             background : #fff;
             line-height: 24px;
+            transition : all 0.3s;
+
+            &:hover {
+                transform: translateY(-12px);
+            }
 
             .bg1 {
                 background-image: url(../img/first/rjyf.png);
@@ -191,42 +211,54 @@
 .appCase {
     .col-3 {
         margin-bottom: 50px;
-        cursor       : pointer;
+        // cursor       : pointer;
     }
 
     .appCasedes {
         border    : 1px solid #D9D9D9;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
         width     : 100%;
         padding   : 30px 40px;
-
+        margin-bottom: 50px;
+        transition: all 0.3s;
+        &:hover{
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        }
         .appCasedesTitle {
-            font-size  : 24px;
-            font-weight: bold;
+            font-size    : 24px;
+            font-weight  : bold;
             margin-bottom: 40px;
         }
     }
 }
 
+.landIn {
+    span {
+        animation   : landIn 0.8s ease-out both;
+        // font-size: 16px;
+    }
+}
+
+@keyframes landIn {
+    from {
+        opacity  : 0;
+        transform: translateY(-20%);
+    }
+
+    to {
+        opacity  : 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes circle {
     0% {
-     transform: scale(1);
-     opacity: 0.1;
+        transform: scale(1);
+        opacity  : 0.4;
     }
-    25% {
-     transform: scale(1.2);
-     opacity: 0.2;
-    }
-    50% {
-     transform: scale(1.4);
-     opacity: 0.3;
-    }
-    75% {
-     transform: scale(1.6);
-     opacity: 0.4;
-    }
+
     100% {
-     transform: scale(1);
-     opacity: 0;
+        transform: scale(2);
+        opacity  : 0;
     }
- }
+}
+

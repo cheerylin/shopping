@@ -1,0 +1,33 @@
+.authWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.authWrapper .left img {
+  width: 400px;
+}
+.authWrapper .right {
+  color: #686767;
+  margin-left: 165px;
+}
+.authWrapper .right .title {
+  font-size: 50px;
+  margin-bottom: 62px;
+}
+.authWrapper .right .des {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.authWrapper .right .desBtn {
+  margin-top: 82px;
+  width: 140px;
+  height: 45px;
+  cursor: pointer;
+  line-height: 45px;
+  text-align: center;
+  background: #0b2240;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 26px;
+}

@@ -427,17 +427,6 @@ input:-ms-input-placeholder {
 .selec a {
   color: #3175ff;
 }
-.show {
-  background-color: #fff !important;
-}
-.show .dropdown-toggle {
-  border: 1px solid #d9d9d9;
-  background-color: #fff !important;
-  color: #595959;
-}
-.show .dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0) !important;
-}
 .dropdown .dropdown-toggle {
   border: 1px solid #d9d9d9;
   background-color: #fff;
@@ -780,4 +769,12 @@ input:-ms-input-placeholder {
 }
 .closeIcon:hover {
   color: #0071FF;
+}
+.alert-warning {
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }

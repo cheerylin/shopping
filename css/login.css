@@ -51,6 +51,10 @@
   color: #3175ff;
   top: -1px;
 }
+.loginContent .loginForm .formItem .codeTips .disableCode {
+  cursor: not-allowed;
+  color: #999;
+}
 .loginContent .loginForm .formLeft {
   display: inline-block;
   width: 80px;

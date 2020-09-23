@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="./css/init.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>水波纹效果</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html,
+		body {
+			height: 100%;
+			overflow: hidden;
+		}
+
+		@keyframes wateranimate {
+			0% {
+				transform: scale(0);
+				opacity: 0.5;
+			}
+
+			100% {
+				transform: scale(2);
+				opacity: 0;
+			}
+		}
+
+		.container {
+			position: relative;
+			/* width: 500px;
+				height: 500px;
+				margin: 50px auto;
+				border: 1px solid yellow; */
+		}
+
+		.water1 {
+			animation: wateranimate 12s 9s ease-out infinite;
+		}
+
+		.water2 {
+			animation: wateranimate 12s 6s ease-out infinite;
+		}
+
+		.water3 {
+			animation: wateranimate 12s 3s ease-out infinite;
+		}
+
+		.water4 {
+			animation: wateranimate 12s 0s ease-out infinite;
+		}
+
+		.water1,
+		.water2,
+		.water3,
+		.water4 {
+			padding: 20%;
+			position: absolute;
+			left: 30%;
+			top: 30%;
+			border: 1px solid pink;
+			box-shadow: 0 0 120px 30px rgba(235, 31, 137, 1) inset;
+			border-radius: 100%;
+			z-index: 1;
+			opacity: 0;
+		}
+	</style>
+</head>
+
+<body class="testwrap">
+	<!-- <div class="container">
+		<div class="water1"></div>
+		<div class="water2"></div>
+		<div class="water3"></div>
+		<div class="water4"></div>
+	</div> -->
+	<button data-text="中山大学" class="btn btn-primary btn-ghost btn-border-stroke  btn-text-float-up">
+		<div class="btn-borders">
+			<div class="border-top"></div>
+			<div class="border-right"></div>
+			<div class="border-bottom"></div>
+			<div class="border-left"></div>
+		</div>
+		<div class="btn-text">
+			中山大学
+		</div>
+	</button>
+</body>
+
+</html>
